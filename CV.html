@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ermin CV</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>Ermin Husic</h1>
+                <p>System developer</p>
+            </div>
+            <div class="portrait">
+                <img src="Image/porträtt.jpg" alt="selfportrait" width="100">
+            </div>
+        </div>
+    </header>
+
+    <nav id="nav">
+        <ul class="links">
+            <li><a href="index.html">General</a></li>
+            <li><a href="PersonligtBrev.html">About</a></li>
+            <li class="active"><a href="CV.html">CV</a></li>
+            <li><a href="Projekt.html">Projects</a></li>
+            <li><a href="Lorem.html">LoremIpsum</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+        <!-- Post -->
+        <section class="post">
+            <header class="major">
+                <h1>CV</h1>
+            </header>
+
+            <!-- Work Experience -->
+            <h2>Work Experience</h2>
+            <div id="workExperience" class="cv"></div>
+
+            <!-- Education -->
+            <h2>Education</h2>
+            <div id="education" class="cv"></div>
+
+            <!-- Quote -->
+            <h2>Quote</h2>
+            <blockquote id="quote"></blockquote>
+        </section>
+    </div>
+
+
+
+    <script>
+        
+        fetch('cv_data.json')
+            .then(response => response.json())
+            .then(data => {
+                
+                const workExperienceDiv = document.getElementById('workExperience');
+                data.workExperience.forEach(job => {
+                    const jobItem = document.createElement('div');
+                    jobItem.innerHTML = 
+                    `
+                        <div class="presentation">
+                            <ul>
+                                <li><strong>${job.place} ${job.year}</strong>: ${job.responsibilities}</li>
+                            </ul>
+                        </div>`;
+                    workExperienceDiv.appendChild(jobItem);
+                });
+
+                const educationDiv = document.getElementById('education');
+                data.education.forEach(edu => {
+                    const eduItem = document.createElement('div');
+                    eduItem.innerHTML = `
+                        <div class="presentation">
+                            <ul>
+                                <li><strong>${edu.institution}</strong>: ${edu.degree}</li>
+                            </ul>
+                        </div>`;
+                    educationDiv.appendChild(eduItem);
+                });
+
+                document.getElementById('quote').innerText = data.quote;
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+    </script>
+
+    <!-- Easter eggs -->
+<div>
+    <!-- Modal-popup -->
+    <div id="eastereggModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Jag vet att jag är pro, du behöver inte skriva det! Stäng nu ner denna sidan och fokusera på min hemsida!</p>
+        </div>
+    </div>
+>
+    <script>
+        // modal
+        let keySequence = '';
+        const eastereggModal = document.getElementById('eastereggModal');
+        document.addEventListener('keydown', function(event) {
+            keySequence += event.key;
+            if (keySequence === '1337') {
+                eastereggModal.style.display = 'block';
+            }
+        });
+
+        document.querySelector('.close').addEventListener('click', function() {
+            eastereggModal.style.display = 'none';
+        });
+
+        // background
+        const portrait = document.querySelector('.portrait img');
+        portrait.addEventListener('click', function() {
+            document.body.style.backgroundColor = 'orange';
+        });
+    </script> 
+</div>
+
+<footer>
+    <div class="footer">
+        <p>&copy; 2024 - All rights reserved</p>
+    </div>
+</footer>
+
+</body>
+</html>

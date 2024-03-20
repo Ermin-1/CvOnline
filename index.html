@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ermin CV</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>Ermin Husic</h1>
+                <p>System developer</p>
+            </div>
+            <div class="portrait">
+                <img src="Image/porträtt.jpg" alt="selfportrait">
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+            </div>
+        </div>
+    </header>
+
+
+
+    <nav id="nav">
+        <ul class="links">
+            <li class="active"><a href="index.html">General</a></li>
+            <li><a href="PersonligtBrev.html">About</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li><a href="Projekt.html">Projects</a></li>
+            <li><a href="Lorem.html">LoremIpsum</a></li>
+    </nav>
+
+
+    
+    <div class="content">
+        <section>
+            <h2>Contact Information</h2>
+            <ul>
+                <li><strong>Email : </strong>ermin.husic@live.se</li>
+                <li><strong>Phone : </strong>+46734195731</li>
+                <li><strong>LinkedIn : </strong><a href="https://www.linkedin.com/in/ermin-husic-a43864163/">Ermin Husic's LinkedIn</a></li>
+                <li><strong>Portfolio : </strong><a href="https://ermin-1.github.io/ErminHusic.github.io/">Ermin Husic's Portfolio</a></li>
+            </ul>
+            <div class="education">
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>University of Campus Varberg</strong>- Bachelor's in Computer Sciences</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h2>Work Experience</h2>
+                <ul>
+                    <li><strong>Lernia Bemanning</strong> - Consultant manager</li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>C#</li>
+                    <li>SQL</li>
+                    <li>STAFF</li>
+                    <li>SALES</li>
+                    <li>CUSTOMER RELATIONSHIPS</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>WCAG A+AA</h2>
+            <ul>
+            <li><strong>Read about this websites qualifiqations : </strong><a href="WCAG.html">Click Here</a></li>
+        </ul>
+        </section>
+        
+
+<!-- Easter eggs -->
+<div>
+    <!-- Modal-popup -->
+    <div id="eastereggModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Jag vet att jag är pro, du behöver inte skriva det! Stäng nu ner denna sidan och fokusera på min hemsida!</p>
+        </div>
+    </div>
+>
+    <script>
+        // modal
+        let keySequence = '';
+        const eastereggModal = document.getElementById('eastereggModal');
+        document.addEventListener('keydown', function(event) {
+            keySequence += event.key;
+            if (keySequence === '1337') {
+                eastereggModal.style.display = 'block';
+            }
+        });
+
+        document.querySelector('.close').addEventListener('click', function() {
+            eastereggModal.style.display = 'none';
+        });
+
+        // background
+        const portrait = document.querySelector('.portrait img');
+        portrait.addEventListener('click', function() {
+            document.body.style.backgroundColor = 'orange';
+        });
+    </script> 
+</div>
+
+
+        
+        <footer>
+            <div class="footer">
+                <p>&copy; 2024 - All rights reserved</p>
+            </div>
+        </footer>
+
+
+</body>
+</html>

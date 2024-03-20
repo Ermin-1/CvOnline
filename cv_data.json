@@ -1,0 +1,28 @@
+{
+    "workExperience": [
+      {
+        "position": "Consultant Manager",
+        "place": "Lernia",
+        "year": "2017-2023",
+        "responsibilities": "On study leave. Personnel and occupational health responsibility. Overall managerial tasks."
+      },
+      {
+        "position": "Group Leader",
+        "place": "Securitas",
+        "year": "2011-2017",
+        "responsibilities": "Responsible for daily security operations at Gekås through Securitas. Administrative work within Securitas systems. Handling fire and intrusion alarms, Rakel, etc."
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Malmö",
+        "degree": "Study and Career Counselor"
+      },
+      {
+        "institution": "Campus Varberg",
+        "degree": ".NET System Developer"
+      }
+    ],
+    "quote": "\"Leadership is not about being the best. It's about making others better.\" - Sheryl Sandberg"
+  }
+  

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ermin CV</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+
+        <div class="header-content">
+            <div>
+                <h1>Ermin Husic</h1>
+                <p>System developer</p>
+            </div>
+            <div class="portrait">
+                <img src="Image/porträtt.jpg" alt="selfportrait" width="100">
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+            </div>
+        </div>
+    </header>
+
+    <nav id="nav">
+        <ul class="links">
+            <li><a href="index.html">General</a></li>
+            <li class="active"><a href="PersonligtBrev.html">About</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li><a href="Projekt.html">Projects</a></li>
+            <li><a href="Lorem.html">LoremIpsum</a></li>
+    </nav>
+
+    <div id="main">
+
+        <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>Personal Letter </h1>
+                    <p>From Consultant Manager to System Developer</p>
+                </header>
+                
+                <p>I am currently studying the first year as a System Developer.NET at Campus in Varberg. C#, .NET, SQL, HTML, CSS. 
+                    I will be in an internship from November 2024 to February 2025. <p>
+        
+                    Before starting my internship, I will have completed the following courses: Agile System Development in Teams, 
+                    Advanced .NET, Advanced System Development with ASP.NET, Database Development and Administration, Object-Oriented Programming, 
+                    System Testing for Frontend Developers, Web Development, and Development with C#. <p>
+                    
+                    Previously, I worked as a consultant manager at Lernia Bemanning. I had personnel and occupational health responsibilities for 40 
+                    consultants who were leased to various companies in Varberg and Falkenberg. Tasks included managing contracts with clients, 
+                    developing overall strategies, occupational health work, recruitment, labor union negotiations, and safety inspections with 
+                    union representatives, among others.  <p>
+                    
+                    I consider myself a solution-oriented and communicative person. I am also accustomed to setting and pursuing both short-term and 
+                    long-term goals. In addition to work and studies, most of my time is devoted to family and friends. <p>
+                    
+                    Best regards, Ermin Husic
+                </p> 
+            </section>
+            
+<!-- Easter eggs -->
+<div>
+    <!-- Modal-popup -->
+    <div id="eastereggModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Jag vet att jag är pro, du behöver inte skriva det! Stäng nu ner denna sidan och fokusera på min hemsida!</p>
+        </div>
+    </div>
+>
+    <script>
+        // modal
+        let keySequence = '';
+        const eastereggModal = document.getElementById('eastereggModal');
+        document.addEventListener('keydown', function(event) {
+            keySequence += event.key;
+            if (keySequence === '1337') {
+                eastereggModal.style.display = 'block';
+            }
+        });
+
+        document.querySelector('.close').addEventListener('click', function() {
+            eastereggModal.style.display = 'none';
+        });
+
+        // background
+        const portrait = document.querySelector('.portrait img');
+        portrait.addEventListener('click', function() {
+            document.body.style.backgroundColor = 'orange';
+        });
+    </script> 
+</div>
+
+            
+            <footer>
+                <div class="footer">
+                    <p>&copy; 2024 - All rights reserved</p>
+                </div>
+    
+            </footer>
+            
+        </div>
+    </body>
+    </html>
+    

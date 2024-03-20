@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ermin CV</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div>
+                <h1>Ermin Husic</h1>
+                <p>System developer</p>
+            </div>
+            <div class="portrait">
+                <img src="Image/porträtt.jpg" alt="selfportrait" width="100">
+            </div>
+        </div>
+    </header>
+
+    <nav id="nav">
+        <ul class="links">
+            <li><a href="index.html">General</a></li>
+            <li><a href="PersonligtBrev.html">About</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li class="active"><a href="Projekt.html">Projects</a></li>
+            <li><a href="Lorem.html">LoremIpsum</a></li>
+        </ul>
+    </nav>
+
+    <!-- Posts -->
+    <section class="posts">
+        <!-- Bankomaten -->
+        <article class="post">
+            <span class="date">Oktober 15, 2023</span>
+            <h2>Bankomaten</h2>
+            <div class="image-wrapper">
+                <a href="https://github.com/Ermin-1/Bankomaten.git" class="image fit"><img src="Image/bankomaten.JPG" alt="" /></a>
+            </div>
+            <p>Slutuppgift i första kursen. Ej OOP.</p>
+            <ul class="actions special">
+                <li><label for="modal-toggle-bankomat" class="button">Mer information</label></li>
+                <li><a href="https://github.com/Ermin-1/Bankomaten.git" class="button">Visa projekt i GitHub</a></li>
+            </ul>
+        </article>
+        <input type="checkbox" id="modal-toggle-bankomat" class="modal-toggle">
+        <!-- Modal Popup -->
+        <div class="modal">
+            <div class="modal-content">
+                <label for="modal-toggle-bankomat" class="close">&times;</label>
+                <h2>Mer information om projektet: Bankomaten</h2>
+                <p>Det här är en enkel konsolapplikation för en bankomat. Programmet hanterar fem olika användare, deras pinkoder och bankkonton med saldon. 
+                Användare kan logga in, se sina konton och saldon, föra över pengar mellan konton, ta ut pengar och logga ut.</p> 
+            </div>
+        </div>
+
+        <!-- Numbers game -->
+        <article class="post">
+            <span class="date">September 24, 2023</span>
+            <h2>Numbers Game</h2>
+            <div class="image-wrapper">
+                <a href="https://github.com/Ermin-1/NumbersGame.git" class="image fit"><img src="Image/numbersgame.JPG" alt="" /></a>
+            </div>
+            <p>Första kursen. Enklare konsolspel där man ska gissa numret från 1-20.</p>
+            <ul class="actions special">
+                <li><label for="modal-toggle-numbersgame" class="button">Mer information</label></li>
+                <li><a href="https://github.com/Ermin-1/NumbersGame.git" class="button">Visa projekt i GitHub</a></li>
+            </ul>
+        </article>
+        <input type="checkbox" id="modal-toggle-numbersgame" class="modal-toggle">
+        <!-- Modal Popup -->
+        <div class="modal">
+            <div class="modal-content">
+                <label for="modal-toggle-numbersgame" class="close">&times;</label>
+                <h2>Mer information om projektet: Numbers Game</h2>
+                <p>Första kursen introducerar elever till grunderna i programmering genom en serie enklare konsolspel. 
+                Ett av dessa spel är en nummergissningslek där spelaren uppmanas att gissa ett nummer mellan 1 och 20. 
+                Genom att interagera med spelet får eleverna praktisk erfarenhet av att använda grundläggande programmeringskoncept som variabler, 
+                villkorssatser och användarinmatning. Denna uppgift syftar till att bygga en solid grund för att förstå mer komplexa koncept och algoritmer som kommer senare i kursen. 
+                Genom att göra lektionerna interaktiva och roliga stimuleras elevernas intresse och engagemang för ämnet, vilket är avgörande för deras framsteg och inlärning.</p>
+            </div>
+        </div>
+
+        <!-- Djur klasser -->
+        <article class="post">
+            <span class="date">Oktober 16, 2023</span>
+            <h2>Djur: Klasser</h2>
+            <div class="image-wrapper">
+                <a href="https://github.com/Ermin-1/Djur-Labb2.git" class="image fit"><img src="Image/klasser.JPG" alt="" /></a>
+            </div>
+            <p>Andra kursen: Första uppgiften inom klasser. Enklare konsolprogram där klasser ärver av varandra.</p>
+            <ul class="actions special">
+                <li><label for="modal-toggle-djurklasser" class="button">Mer information</label></li>
+                <li><a href="https://github.com/Ermin-1/Djur-Labb2.git" class="button">Visa projekt i GitHub</a></li>
+            </ul>
+        </article>
+        <input type="checkbox" id="modal-toggle-djurklasser" class="modal-toggle">
+        <!-- Modal Popup -->
+        <div class="modal">
+            <div class="modal-content">
+                <label for="modal-toggle-djurklasser" class="close">&times;</label>
+                <h2>Mer information om projektet: Djur Klasser</h2>
+                <p>
+                    Andra kursen introducerar elever till koncepten med objektorienterad programmering genom att utforska användningen av klasser. Den första uppgiften inom kursen fokuserar på att implementera klasser och utforska konceptet med arv. Eleverna utmanas att skapa ett enklare konsolprogram där olika klasser ärver egenskaper och metoder från varandra. 
+                </p>
+            </div>
+        </div>
+
+        <!-- Easter eggs -->
+        <div>
+            <!-- Modal-popup -->
+            <div id="eastereggModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Jag vet att jag är pro, du behöver inte skriva det! Stäng nu ner denna sidan och fokusera på min hemsida!</p>
+                </div>
+            </div>
+
+            <script>
+                // modal
+                let keySequence = '';
+                const eastereggModal = document.getElementById('eastereggModal');
+                document.addEventListener('keydown', function(event) {
+                    keySequence += event.key;
+                    if (keySequence === '1337') {
+                        eastereggModal.style.display = 'block';
+                    }
+                });
+
+                document.querySelector('.close').addEventListener('click', function() {
+                    eastereggModal.style.display = 'none';
+                });
+
+                // background
+                const portrait = document.querySelector('.portrait img');
+                portrait.addEventListener('click', function() {
+                    document.body.style.backgroundColor = 'orange';
+                });
+            </script> 
+        </div>
+    </section>
+
+    <!-- Github -->
+    <section class="github-projects">
+        <h2>GitHub Projects</h2>
+        <ul id="github-projects-list"></ul>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 - All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- Github API -->
+    <script>
+        fetch('https://api.github.com/users/Ermin-1/repos')
+            .then(response => response.json())
+            .then(data => {
+                const githubProjectsList = document.getElementById('github-projects-list');
+                data.forEach(project => {
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.href = project.html_url;
+                    link.textContent = project.name;
+                    listItem.appendChild(link);
+                    githubProjectsList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error fetching GitHub projects:', error));
+    </script>
+    
+</body>
+</html>
